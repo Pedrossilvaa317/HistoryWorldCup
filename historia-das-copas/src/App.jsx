@@ -70,11 +70,18 @@ const [copaAtiva,setCopaAtiva] = useState(todasAsCopas[0]);
 
   return( // Aqui dentro do return é onde colocamos o nosso HTML!
 
-    <div>
+    <div className='container mt-4'>
       <Banner dadosDaCopa={copaAtiva}/>
-      <ListaArtilheiros listaDeArtilheiros={copaAtiva.artilheiros}/>
-      <MenuAnos copas={todasAsCopas} mudarCopa={setCopaAtiva}/>
+      <hr className='my-4'/> 
 
+      <div className='row'>
+        <div className='col-md-8'>
+          <ListaArtilheiros listaDeArtilheiros={copaAtiva.artilheiros}/>
+        </div>
+        <div className='col-md-4'>
+          <MenuAnos copas={todasAsCopas} mudarCopa={setCopaAtiva}/>
+        </div>
+      </div>
     </div>
        
   )

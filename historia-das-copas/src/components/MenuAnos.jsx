@@ -6,6 +6,7 @@ export default function MenuAnos({ copas, mudarCopa }) {
         <button 
           key={copaIteracao.ano} 
           onClick={() => mudarCopa(copaIteracao)}
+          className="btn btn-primary m-1"
         >
           {copaIteracao.ano}
         </button>
